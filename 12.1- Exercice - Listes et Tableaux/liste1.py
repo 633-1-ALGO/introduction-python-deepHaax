@@ -6,10 +6,13 @@
 # Indication :   L'alignement rectiligne n'est pas une contrainte, tant que la table est visible ligne par ligne c'est ok.
 #               Si vous êtes perfectionnistes faites vous plaisir.
 liste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-k=1
+i = 1
 
-for i in range(0, len(liste)):
-    print(liste[i]*k)
-    k = k+1
+while i < len(liste):
 
-print("dsddads")
+    for j in range(0, len(liste)):
+        print(liste[j]*i, sep='', end=' ', flush=True)
+    print("\n")
+    i = i+1
+
+
