@@ -6,19 +6,14 @@ tab_lettres = [
     ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w',
      'x', 'y', 'z', ' '], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 
-#for i in range(len(texte)):
-
-currentString = texte[0]
-
-for j in range(len(tab_lettres[0])):
-
-     if tab_lettres[0][2] == currentString:
-          print("+")
-
+def afficherFrequenceLettreString(chaine,tabDeLettres):
+    for i in range(0, len(tabDeLettres[0])):
+        currentstring = tabDeLettres[0][i]
+        for j in range(0, len(chaine)):
+            if chaine[j] == currentstring:
+                tabDeLettres[1][i] += 1
+    print(tabDeLettres[1])
 
 
+afficherFrequenceLettreString(texte, tab_lettres)
 
-
-#print(texte[0])
-#print(len(tab_lettres[0]))
-#print(tab_lettres[0][1])
